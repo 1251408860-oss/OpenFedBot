@@ -52,6 +52,11 @@ Fresh-clone outputs are written under repository-local `results/`:
 
 No default command writes to `/home/user/workspace/HiTrust-FedBot/...` or any workspace-external results directory.
 
+Interpretation note:
+
+- If runtime/deployment timing tables differ slightly from the tracked bundle, treat that as expected environment sensitivity.
+- The review criterion should be exact reproduction of core method and triage summaries; those are stable under this path.
+
 ## 5) Paper-Facing Artifacts
 
 If you only need the paper-facing snapshot, inspect:

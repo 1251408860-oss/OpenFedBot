@@ -102,4 +102,5 @@ The maintained target is:
 
 - core paper tables and the operating-frontier figure should match the reference values
 - runtime and deployment timing summaries may vary across hardware and runtime stacks
+- timing-table variation is expected and does not change the paper's method-level conclusions
 - manifest and bundle metadata files naturally differ by timestamp and path

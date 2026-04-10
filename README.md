@@ -127,6 +127,12 @@ Expected generated directories:
 - `results/open_world_mimic_reinforced_smoke_<timestamp>/`
 - `results/open_world_full_suite_multiproto_coverageswitch_clean_seed10_<timestamp>/`
 
+Result interpretation:
+
+- Core paper-facing method and triage tables are expected to match exactly when the workflow is followed.
+- Runtime and deployment timing summaries are hardware/runtime-stack sensitive and may vary across machines.
+- These timing variations do not change the paper's method-level conclusions.
+
 ## Digest, Bundle, And Figure Rebuild
 
 From a freshly generated run:

@@ -36,4 +36,5 @@ The repository was checked in the local `Ubuntu5` / `DL` environment with:
 - The full raw experiment runs are not tracked in GitHub because they are large generated artifacts.
 - The tracked reviewer bundle is intentionally small and paper-facing.
 - Public graph assets are built locally from `Ca-Bench` (`assets/public_cabench_v1/`) and are intentionally ignored by Git.
+- Runtime and deployment timing tables are expected to vary across hardware/runtime stacks; this does not affect method-level paper conclusions.
 - Legacy drafts, notes, and older result directories were archived locally so the repository surface stays focused on the current mainline.
