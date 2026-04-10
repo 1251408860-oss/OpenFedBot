@@ -1,56 +1,105 @@
 # Reproduction Guide
 
-This directory documents the maintained reproduction path for the reviewer-facing repository.
+This guide documents the maintained reviewer path for reproducing `OpenFedBot` from a fresh clone.
 
-## Fast Validation Path
+## Scope
 
-After activating a Python 3.10 environment:
+The repository tracks a paper-facing artifact snapshot under `paper_artifacts/`, while runtime graph assets and new experiment outputs are generated locally.
 
-```bash
-make help
-make PYTHON=/home/user/miniconda3/envs/DL/bin/python check-env
-make PYTHON=/home/user/miniconda3/envs/DL/bin/python validate-smoke
-make PYTHON=/home/user/miniconda3/envs/DL/bin/python smoke
-```
+## A. Environment Setup
 
-## Canonical Digest Rebuild
-
-Rebuild the canonical digest from the frozen clean run:
+From the repository root:
 
 ```bash
-make PYTHON=/home/user/miniconda3/envs/DL/bin/python digest-canonical
+conda env create -f environment.yml
+conda activate openfedbot
+python scripts/check_env.py --strict
 ```
 
-Equivalent direct command:
+If network instability prevents `conda env create`, install dependencies in an existing Python `3.10` environment with:
 
 ```bash
-python scripts/build_reinforced_digest.py \
-  --run-dir results/open_world_full_suite_multiproto_coverageswitch_clean_seed10_20260408T023210Z \
-  --reference-method cpd_shift_multiproto_consensus_plus \
-  --paper-main-method cpd_shift_multiproto_consensus_plus \
-  --paper-baselines cpd_shift_consensus_plus cpd_shift_multiproto_coverage_switch_plus ova_gate msp energy \
-  --paper-main-policy triage_shift_multiproto_coverage_switch_plus_ova_nonbenign \
-  --paper-appendix-policies triage_shift_multiproto_consensus_plus_ova_nonbenign triage_shift_multiproto_consensus_gate_plus_ova_nonbenign \
-  --comparators cpd_shift_consensus_plus cpd_shift_multiproto_coverage_switch_plus cpd_shift_multiproto_consensus_gate_plus \
-  --bank-selection adaptive \
-  --bank-selection-metric cpd_val_coverage \
-  --bank-selection-tie-break-metric cpd_val_risk
+python -m pip install -r requirements.txt
+python -m pip install -e . --no-deps
+python scripts/check_env.py --strict
 ```
 
-## Submission Bundle Rebuild
+## B. Public Data Bootstrap
+
+Download or clone public `Ca-Bench` and point `CABENCH_ROOT` at that checkout:
 
 ```bash
-make PYTHON=/home/user/miniconda3/envs/DL/bin/python bundle
+make PYTHON=/path/to/python prepare-public-assets CABENCH_ROOT=/path/to/Ca-Bench
 ```
 
-## Figure Rebuild
+This step builds and validates reviewer-local graph assets at:
+
+- `assets/public_cabench_v1/graphs/`
+- `assets/public_cabench_v1/meta/`
+- `assets/public_cabench_v1/asset_manifest.json`
+
+## C. Smoke Reproduction
 
 ```bash
-make PYTHON=/home/user/miniconda3/envs/DL/bin/python figures
+make PYTHON=/path/to/python validate-smoke
+make PYTHON=/path/to/python smoke
 ```
 
-## Scope Notes
+Expected output:
 
-- The tracked `paper_artifacts/` package is the Git-friendly subset intended for direct inspection.
-- The raw `results/` tree is a local workspace artifact and is not fully tracked in GitHub.
-- Legacy docs and superseded local result directories were archived to keep the current repository focused on the active paper mainline.
+- `results/open_world_mimic_reinforced_smoke_<timestamp>/`
+
+## D. Mainline Reproduction
+
+```bash
+make PYTHON=/path/to/python validate-mainline
+make PYTHON=/path/to/python mainline
+```
+
+Expected output:
+
+- `results/open_world_full_suite_multiproto_coverageswitch_clean_seed10_<timestamp>/`
+
+## E. Digest And Bundle Rebuild
+
+Use the generated mainline run directory:
+
+```bash
+make PYTHON=/path/to/python digest RUN_DIR=results/open_world_full_suite_multiproto_coverageswitch_clean_seed10_<timestamp>
+make PYTHON=/path/to/python bundle DIGEST_DIR=results/reinforced_digest_<timestamp>
+```
+
+Expected output:
+
+- `results/reinforced_digest_<timestamp>/`
+- `results/submission_bundle_<timestamp>/`
+
+## F. Figure Rebuild
+
+Generate cov10 and cov14 runs, digest them, then build figures:
+
+```bash
+make PYTHON=/path/to/python cov10
+make PYTHON=/path/to/python cov14
+make PYTHON=/path/to/python digest RUN_DIR=results/open_world_full_suite_multiproto_coverageswitch_clean_seed10_cov10_<timestamp>
+make PYTHON=/path/to/python digest RUN_DIR=results/open_world_full_suite_multiproto_coverageswitch_clean_seed10_cov14_<timestamp>
+MAIN_DIGEST=results/reinforced_digest_<mainline_digest_timestamp>
+COV10_DIGEST=results/reinforced_digest_<cov10_digest_timestamp>
+COV14_DIGEST=results/reinforced_digest_<cov14_digest_timestamp>
+make PYTHON=/path/to/python figures \
+  DIGEST_DIR=$MAIN_DIGEST \
+  COV10_DIGEST_DIR=$COV10_DIGEST \
+  COV14_DIGEST_DIR=$COV14_DIGEST
+```
+
+Expected output:
+
+- `results/wasa_main_figures_<timestamp>/`
+
+## G. Reproduction Interpretation
+
+The maintained target is:
+
+- core paper tables and the operating-frontier figure should match the reference values
+- runtime and deployment timing summaries may vary across hardware and runtime stacks
+- manifest and bundle metadata files naturally differ by timestamp and path

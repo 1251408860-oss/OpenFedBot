@@ -1,10 +1,16 @@
 {
   "run_name": "open_world_mimic_reinforced_smoke",
-  "hitrust_root": "/home/user/workspace/HiTrust-FedBot",
-  "output_root": "/home/user/workspace/OpenFedBot/results",
+  "graph_root": "assets/public_cabench_v1",
+  "output_root": "results",
   "scenario_graphs": {
-    "scenario_e": "data_hitrust/public_benchmarks/cabench_v1/graphs/cabench_scenario_e_three_tier_high2_public_graph.pt",
-    "scenario_h": "data_hitrust/public_benchmarks/cabench_v1/graphs/cabench_scenario_h_mimic_heavy_overlap_public_graph.pt"
+    "scenario_e": {
+      "graph_path": "graphs/cabench_scenario_e_three_tier_high2_public_graph.pt",
+      "manifest_path": "meta/cabench_scenario_e_three_tier_high2_public_manifest.json"
+    },
+    "scenario_h": {
+      "graph_path": "graphs/cabench_scenario_h_mimic_heavy_overlap_public_graph.pt",
+      "manifest_path": "meta/cabench_scenario_h_mimic_heavy_overlap_public_manifest.json"
+    }
   },
   "protocols": [
     {

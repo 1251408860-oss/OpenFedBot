@@ -2,6 +2,8 @@
 
 This directory was pruned on `2026-04-09` to keep only the current paper-facing artifacts and one recent smoke verification run at the top level.
 
+As of `2026-04-10`, reviewer commands (`make smoke`, `make mainline`, `make digest`, `make bundle`) default to writing all new outputs into this repository-local `results/` tree.
+
 ## Active Top-Level Artifacts
 
 - `digest_cov10/`: threshold-sweep support digest for coverage `0.10`

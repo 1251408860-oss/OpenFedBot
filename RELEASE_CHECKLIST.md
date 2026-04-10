@@ -8,6 +8,7 @@ Use this checklist before publishing a reviewer-facing repository snapshot or Gi
 - `docs/` top level contains only the active paper-facing documents
 - legacy docs remain under `docs/_archive_legacy_20260409/`
 - `results/` top level remains pruned and indexed by `results/README.md`
+- `assets/README.md` documents reviewer-local graph assets
 
 ## Paper Artifact Package
 
@@ -19,11 +20,11 @@ Use this checklist before publishing a reviewer-facing repository snapshot or Gi
 ## Reproduction Checks
 
 - `scripts/check_env.py --strict` passes in the validated environment
-- maintained smoke config validates
-- smoke run completes
-- canonical digest rebuild completes
-- submission bundle rebuild completes
-- paper-facing figure rebuild completes
+- `make prepare-public-assets CABENCH_ROOT=<path>` completes
+- maintained smoke and mainline configs validate
+- smoke and mainline runs complete with outputs under repository-local `results/`
+- digest rebuild from a fresh mainline run completes
+- submission bundle rebuild from that digest completes
 
 ## Release Packaging
 

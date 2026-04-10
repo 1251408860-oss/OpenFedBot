@@ -34,6 +34,8 @@ from openfedbot.reporting import aggregate_rows, plot_risk_coverage, plot_unknow
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run OpenFedBot experiments")
     parser.add_argument("--config", required=True)
+    parser.add_argument("--graph-root", default="")
+    parser.add_argument("--output-root", default="")
     return parser.parse_args()
 
 
@@ -44,7 +46,9 @@ def repo_path(root: Path, value: str) -> Path:
     return (root / path).resolve()
 
 
-def input_root(cfg: dict[str, object]) -> Path:
+def input_root(cfg: dict[str, object], override_root: str = "") -> Path:
+    if str(override_root).strip():
+        return repo_path(PROJECT_ROOT, str(override_root))
     if cfg.get("graph_root") is not None:
         return repo_path(PROJECT_ROOT, str(cfg["graph_root"]))
     if cfg.get("hitrust_root") is not None:
@@ -236,8 +240,11 @@ def _stage_scaled_ratio(
 def main() -> None:
     args = parse_args()
     cfg = load_json(args.config)
-    graph_root = input_root(cfg)
-    output_root = repo_path(PROJECT_ROOT, str(cfg["output_root"]))
+    graph_root = input_root(cfg, args.graph_root)
+    if str(args.output_root).strip():
+        output_root = repo_path(PROJECT_ROOT, str(args.output_root))
+    else:
+        output_root = repo_path(PROJECT_ROOT, str(cfg["output_root"]))
     run_name = str(cfg.get("run_name", "open_world_run"))
     run_dir = ensure_dir(output_root / f"{run_name}_{timestamp_utc()}")
     save_json(run_dir / "config.snapshot.json", cfg)

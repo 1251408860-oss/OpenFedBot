@@ -1,7 +1,7 @@
 {
   "run_name": "open_world_full_suite_multiproto_coverageswitch_clean_seed10",
   "graph_root": "/path/to/public_cabench_assets",
-  "output_root": "/home/user/workspace/OpenFedBot/results",
+  "output_root": "results",
   "scenario_graphs": {
     "scenario_e": {
       "graph_path": "graphs/cabench_scenario_e_three_tier_high2_public_graph.pt",

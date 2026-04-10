@@ -20,6 +20,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--graph", default="")
     parser.add_argument("--manifest", default="")
     parser.add_argument("--config", default="")
+    parser.add_argument("--graph-root", default="")
     return parser.parse_args()
 
 
@@ -30,7 +31,9 @@ def repo_path(root: Path, value: str) -> Path:
     return (root / path).resolve()
 
 
-def input_root(cfg: dict[str, object]) -> Path:
+def input_root(cfg: dict[str, object], override_root: str = "") -> Path:
+    if str(override_root).strip():
+        return repo_path(PROJECT_ROOT, str(override_root))
     if cfg.get("graph_root") is not None:
         return repo_path(PROJECT_ROOT, str(cfg["graph_root"]))
     if cfg.get("hitrust_root") is not None:
@@ -73,7 +76,7 @@ def main() -> None:
 
     if str(args.config).strip():
         cfg = load_json(args.config)
-        root = input_root(cfg)
+        root = input_root(cfg, args.graph_root)
         for scenario_name, raw_value in dict(cfg["scenario_graphs"]).items():
             graph_path, manifest_path = resolve_scenario_spec(root, raw_value)
             item = validate_one(graph_path, manifest_path)

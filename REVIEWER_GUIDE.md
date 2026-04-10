@@ -1,35 +1,59 @@
 # Reviewer Guide
 
-This repository is organized as a reviewer-facing source snapshot plus a tracked paper artifact package.
+This is the shortest practical path for reviewers who want to rerun `OpenFedBot` from a fresh clone.
 
-## Start Here
+## 1) Prepare Environment
 
-1. [`README.md`](README.md)
-2. [`paper_artifacts/README.md`](paper_artifacts/README.md)
-3. [`paper_artifacts/submission_bundle_20260409/tables/`](paper_artifacts/submission_bundle_20260409/tables/)
-4. [`paper_artifacts/submission_bundle_20260409/figures/`](paper_artifacts/submission_bundle_20260409/figures/)
-5. [`paper_artifacts/submission_bundle_20260409/docs/`](paper_artifacts/submission_bundle_20260409/docs/)
+Use Python `3.10` and install dependencies:
 
-## Repository Scope
+```bash
+conda env create -f environment.yml
+conda activate openfedbot
+python scripts/check_env.py --strict
+```
 
-Included:
+If `conda env create` is blocked by transient package-download failures, install with `requirements.txt` in an existing Python `3.10` environment, then rerun `python scripts/check_env.py --strict`.
 
-- source code, configs, schema docs
-- a tracked paper artifact bundle
-- a practical reproduction path
+## 2) Build Public Graph Assets
 
-Not included:
+`OpenFedBot` expects graph `.pt` assets but does not track them in Git. Build them locally from public `Ca-Bench` captures:
 
-- the full raw experiment outputs from the original `results/` workspace
-- the external graph assets referenced by the legacy `hitrust_root` configs
+```bash
+make PYTHON=/path/to/python prepare-public-assets CABENCH_ROOT=/path/to/Ca-Bench
+```
 
-## Reproduction Entry Point
+This creates:
 
-See [`repro/README.md`](repro/README.md) for the maintained validation path:
+- `assets/public_cabench_v1/graphs/cabench_scenario_e_three_tier_high2_public_graph.pt`
+- `assets/public_cabench_v1/graphs/cabench_scenario_h_mimic_heavy_overlap_public_graph.pt`
+- `assets/public_cabench_v1/meta/*.json`
 
-- environment check
-- graph schema validation
-- smoke run
-- canonical digest rebuild
-- bundle rebuild
-- figure rebuild
+## 3) Run Reviewer Validation
+
+```bash
+make PYTHON=/path/to/python check-env
+make PYTHON=/path/to/python validate-smoke
+make PYTHON=/path/to/python smoke
+```
+
+Optional full mainline:
+
+```bash
+make PYTHON=/path/to/python validate-mainline
+make PYTHON=/path/to/python mainline
+```
+
+## 4) Outputs
+
+Fresh-clone outputs are written under repository-local `results/`:
+
+- `results/open_world_mimic_reinforced_smoke_<timestamp>/`
+- `results/open_world_full_suite_multiproto_coverageswitch_clean_seed10_<timestamp>/`
+
+No default command writes to `/home/user/workspace/HiTrust-FedBot/...` or any workspace-external results directory.
+
+## 5) Paper-Facing Artifacts
+
+If you only need the paper-facing snapshot, inspect:
+
+- `paper_artifacts/submission_bundle_20260409/`
