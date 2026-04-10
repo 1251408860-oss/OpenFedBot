@@ -1,0 +1,76 @@
+{
+  "run_name": "open_world_mimic_reinforced_smoke",
+  "graph_root": "/path/to/public_cabench_assets",
+  "output_root": "/home/user/workspace/OpenFedBot/results",
+  "scenario_graphs": {
+    "scenario_e": {
+      "graph_path": "graphs/cabench_scenario_e_three_tier_high2_public_graph.pt",
+      "manifest_path": "meta/cabench_scenario_e_three_tier_high2_public_manifest.json"
+    },
+    "scenario_h": {
+      "graph_path": "graphs/cabench_scenario_h_mimic_heavy_overlap_public_graph.pt",
+      "manifest_path": "meta/cabench_scenario_h_mimic_heavy_overlap_public_manifest.json"
+    }
+  },
+  "protocols": [
+    {
+      "name": "same_e_mimic",
+      "source": "scenario_e",
+      "target": "scenario_e",
+      "holdout_family": "mimic",
+      "target_mode": "temporal_test"
+    },
+    {
+      "name": "e_to_h_mimic",
+      "source": "scenario_e",
+      "target": "scenario_h",
+      "holdout_family": "mimic",
+      "target_mode": "all_flow"
+    }
+  ],
+  "seeds": [
+    11
+  ],
+  "num_clients": 10,
+  "partition_mode": "topology_noniid",
+  "hidden_dim": 32,
+  "dropout": 0.2,
+  "global_warmup_epochs": 4,
+  "rounds": 2,
+  "local_epochs": 1,
+  "lr": 0.01,
+  "train_edge_dropout": 0.0,
+  "center_loss_weight": 0.0,
+  "coverage_target": 0.75,
+  "alpha": 0.2,
+  "cpd_risk_target": 0.15,
+  "target_adapt_momentum": 0.5,
+  "include_ova_gate": true,
+  "calibration_banks": [
+    {
+      "name": "small",
+      "fraction": 0.25
+    },
+    {
+      "name": "large",
+      "fraction": 1.0
+    }
+  ],
+  "stress_tests": [
+    {
+      "name": "clean",
+      "type": "clean",
+      "rate": 0.0
+    },
+    {
+      "name": "edge_drop_30",
+      "type": "edge_dropout",
+      "rate": 0.3
+    },
+    {
+      "name": "boundary_drop_30",
+      "type": "boundary_dropout",
+      "rate": 0.3
+    }
+  ]
+}

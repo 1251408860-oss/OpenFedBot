@@ -1,0 +1,43 @@
+{
+  "run_name": "open_world_mimic_main",
+  "hitrust_root": "/home/user/workspace/HiTrust-FedBot",
+  "output_root": "/home/user/workspace/OpenFedBot/results",
+  "scenario_graphs": {
+    "scenario_e": "data_hitrust/public_benchmarks/cabench_v1/graphs/cabench_scenario_e_three_tier_high2_public_graph.pt",
+    "scenario_h": "data_hitrust/public_benchmarks/cabench_v1/graphs/cabench_scenario_h_mimic_heavy_overlap_public_graph.pt"
+  },
+  "protocols": [
+    {
+      "name": "same_e_mimic",
+      "source": "scenario_e",
+      "target": "scenario_e",
+      "holdout_family": "mimic",
+      "target_mode": "temporal_test"
+    },
+    {
+      "name": "e_to_h_mimic",
+      "source": "scenario_e",
+      "target": "scenario_h",
+      "holdout_family": "mimic",
+      "target_mode": "all_flow"
+    },
+    {
+      "name": "h_to_e_mimic",
+      "source": "scenario_h",
+      "target": "scenario_e",
+      "holdout_family": "mimic",
+      "target_mode": "all_flow"
+    }
+  ],
+  "seeds": [11, 42, 111],
+  "num_clients": 10,
+  "partition_mode": "topology_noniid",
+  "hidden_dim": 32,
+  "dropout": 0.2,
+  "global_warmup_epochs": 8,
+  "rounds": 5,
+  "local_epochs": 1,
+  "lr": 0.01,
+  "coverage_target": 0.75,
+  "alpha": 0.2
+}

@@ -1,0 +1,15 @@
+{
+  "upstream_repo": "https://github.com/1251408860-oss/Ca-Bench",
+  "upstream_commit": "666af74e55f03c321557b2f2f83feb4f0950dd2d",
+  "frozen_files": [
+    {
+      "path": "core_experiments/build_graph_v2.py",
+      "sha256": "f7112eca1a258039601ae6d74feb73374bda0ba1a8a21019fb9a223feaa9a7b7"
+    },
+    {
+      "path": "core_experiments/internal/submission_common.py",
+      "sha256": "85c0525372ebdbdfc35d39f4d0e4fff4a02031fa0ce03c54482efdd41fb6b166"
+    }
+  ],
+  "note": "Local frozen snapshot used to avoid runtime fetches from the upstream main branch."
+}

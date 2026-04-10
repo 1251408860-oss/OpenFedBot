@@ -1,0 +1,18 @@
+{
+  "run_dir": "/home/user/workspace/OpenFedBot/results/open_world_full_suite_multiproto_coverageswitch_clean_seed10_20260408T023210Z",
+  "digest_dir": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z",
+  "reference_method": "cpd_shift_multiproto_consensus_plus",
+  "comparators": [
+    "cpd_shift_consensus_plus",
+    "cpd_shift_multiproto_coverage_switch_plus",
+    "cpd_shift_multiproto_consensus_gate_plus"
+  ],
+  "primary_bank": "large",
+  "bank_selection_mode": "adaptive",
+  "bank_selection_metric": "cpd_val_coverage",
+  "bank_selection_tie_break_metric": "cpd_val_risk",
+  "bootstrap_iters": 10000,
+  "tie_tolerance": 0.0001,
+  "paper_main_method": "cpd_shift_multiproto_consensus_plus",
+  "paper_main_policy": "triage_shift_multiproto_coverage_switch_plus_ova_nonbenign"
+}

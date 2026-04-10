@@ -1,0 +1,48 @@
+{
+  "paper_main_method": "cpd_shift_multiproto_consensus_plus",
+  "paper_main_policy": "triage_shift_multiproto_coverage_switch_plus_ova_nonbenign",
+  "paper_baselines": [
+    "cpd_shift_consensus_plus",
+    "cpd_shift_multiproto_coverage_switch_plus",
+    "ova_gate",
+    "msp",
+    "energy"
+  ],
+  "paper_appendix_methods": [
+    "cpd_strict",
+    "cpd_adapt",
+    "cpd_adapt_consensus"
+  ],
+  "paper_appendix_policies": [
+    "triage_shift_multiproto_consensus_plus_ova_nonbenign",
+    "triage_shift_multiproto_consensus_gate_plus_ova_nonbenign"
+  ],
+  "bank_selection_mode": "adaptive",
+  "bank_selection_metric": "cpd_val_coverage",
+  "bank_selection_tie_break_metric": "cpd_val_risk",
+  "authoritative_outputs": {
+    "main_method_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_main_method_summary.csv",
+    "main_triage_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_main_triage_summary.csv",
+    "review_load_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_review_load_summary.csv",
+    "deployment_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_deployment_summary.csv",
+    "deployment_protocol_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_deployment_protocol_summary.csv",
+    "runtime_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_runtime_summary.csv",
+    "frontier_csv": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_operating_frontier.csv",
+    "frontier_plot": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_operating_frontier.png",
+    "hardest_auto_protocols": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/hardest_cpd_consensus_protocols.csv",
+    "hardest_triage_protocols": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/hardest_triage_consensus_ova_protocols.csv",
+    "hardest_protocol_comparison": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/hardest_protocol_method_comparison.csv",
+    "fixed_large_method_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/clean_large_method_summary.csv",
+    "all_policy_review_load_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/triage_review_load_summary.csv",
+    "selected_bank_assignments": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/selected_bank_assignments.csv",
+    "fixed_large_triage_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/triage_clean_summary.csv",
+    "paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_consensus_plus_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_consensus_plus_summary.csv",
+    "paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_coverage_switch_plus_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_coverage_switch_plus_summary.csv",
+    "paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_consensus_gate_plus_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_consensus_gate_plus_summary.csv",
+    "adaptive_method_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/adaptive_bank_method_summary.csv",
+    "adaptive_triage_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/adaptive_bank_triage_summary.csv",
+    "adaptive_paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_consensus_plus_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/adaptive_paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_consensus_plus_summary.csv",
+    "adaptive_paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_coverage_switch_plus_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/adaptive_paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_coverage_switch_plus_summary.csv",
+    "adaptive_paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_consensus_gate_plus_summary": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/adaptive_paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_consensus_gate_plus_summary.csv"
+  }
+}

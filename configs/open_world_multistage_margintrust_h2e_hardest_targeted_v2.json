@@ -1,0 +1,81 @@
+{
+  "run_name": "open_world_multistage_margintrust_h2e_hardest_targeted_v2",
+  "hitrust_root": "/home/user/workspace/HiTrust-FedBot",
+  "output_root": "/home/user/workspace/OpenFedBot/results",
+  "scenario_graphs": {
+    "scenario_e": "data_hitrust/public_benchmarks/cabench_v1/graphs/cabench_scenario_e_three_tier_high2_public_graph.pt",
+    "scenario_h": "data_hitrust/public_benchmarks/cabench_v1/graphs/cabench_scenario_h_mimic_heavy_overlap_public_graph.pt"
+  },
+  "protocols": [
+    {
+      "name": "h_to_e_burst",
+      "source": "scenario_h",
+      "target": "scenario_e",
+      "holdout_family": "burst",
+      "target_mode": "all_flow"
+    },
+    {
+      "name": "h_to_e_slowburn",
+      "source": "scenario_h",
+      "target": "scenario_e",
+      "holdout_family": "slowburn",
+      "target_mode": "all_flow"
+    }
+  ],
+  "seeds": [11, 17, 23],
+  "num_clients": 10,
+  "partition_mode": "topology_noniid",
+  "hidden_dim": 32,
+  "dropout": 0.2,
+  "global_warmup_epochs": 8,
+  "rounds": 5,
+  "local_epochs": 1,
+  "lr": 0.01,
+  "coverage_target": 0.75,
+  "alpha": 0.2,
+  "cpd_risk_target": 0.15,
+  "trust_consensus_risk_target": 0.10,
+  "benign_reclaim_risk_target": 0.02,
+  "target_adapt_momentum": 0.5,
+  "include_ova_gate": true,
+  "target_confidence_adapt_enabled": true,
+  "target_confidence_adapt_stages": 3,
+  "target_confidence_adapt_epochs": 3,
+  "target_confidence_adapt_lr": 0.003,
+  "target_confidence_source_weight": 1.0,
+  "target_confidence_pseudo_weight": 0.45,
+  "target_confidence_uniform_weight": 0.04,
+  "target_confidence_weighted_pseudo": true,
+  "target_confidence_min_weight": 0.45,
+  "target_confidence_soft_pseudo_enabled": true,
+  "target_confidence_soft_pseudo_temperature": 1.0,
+  "target_confidence_prototype_weight": 0.08,
+  "target_confidence_prototype_nonbenign_only": true,
+  "target_confidence_prototype_margin_weight": 0.20,
+  "target_confidence_prototype_margin_value": 0.20,
+  "target_confidence_prototype_margin_nonbenign_only": true,
+  "target_pseudo_methods": [
+    "cpd_shift_trust_consensus_gate_plus",
+    "cpd_knn_trust_consensus_gate_plus",
+    "cpd_trust_consensus_gate_plus"
+  ],
+  "target_pseudo_max_ratio": 0.08,
+  "target_pseudo_ratio_growth": 1.0,
+  "target_uncertainty_nonbenign_only": false,
+  "review_selector_enabled": true,
+  "review_selector_benign_target": 0.2,
+  "shift_reclaim_enabled": true,
+  "shift_conf_quantile": 0.05,
+  "shift_ova_quantile": 0.05,
+  "shift_proto_quantile": 0.95,
+  "knn_k": 8,
+  "trust_k": 8,
+  "calibration_banks": [
+    {"name": "small", "fraction": 0.25},
+    {"name": "medium", "fraction": 0.5},
+    {"name": "large", "fraction": 1.0}
+  ],
+  "stress_tests": [
+    {"name": "clean", "type": "clean", "rate": 0.0}
+  ]
+}

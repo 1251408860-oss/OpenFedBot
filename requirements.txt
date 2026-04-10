@@ -1,0 +1,12 @@
+# Validated against the Ubuntu5 / DL environment on 2026-04-09.
+# The original environment used torch 2.10.0+cu128. If you need a CUDA-
+# specific wheel, install the matching official PyTorch build before
+# running `pip install -e . --no-deps`.
+
+numpy==2.2.6
+scipy==1.15.3
+matplotlib==3.10.8
+scikit-learn==1.7.2
+networkx==3.4.2
+torch==2.10.0
+torch-geometric==2.7.0

@@ -1,0 +1,227 @@
+{
+  "bundle_dir": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z",
+  "source_authoritative_manifest": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_authoritative_manifest.json",
+  "source_run_manifest": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/manifest.json",
+  "source_run_dir": "/home/user/workspace/OpenFedBot/results/open_world_full_suite_multiproto_coverageswitch_clean_seed10_20260408T023210Z",
+  "source_digest_dir": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z",
+  "paper_main_method": "cpd_shift_multiproto_consensus_plus",
+  "paper_main_policy": "triage_shift_multiproto_coverage_switch_plus_ova_nonbenign",
+  "records": [
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_main_method_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/paper_main_method_summary.csv",
+      "size_bytes": 5597,
+      "sha256": "30c47bc26da2c7ec7840e9815dd4a28f2a0b8a2758ddbec6253f927eab5c86af"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_main_triage_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/paper_main_triage_summary.csv",
+      "size_bytes": 1766,
+      "sha256": "7a83ee493a852ca708639afb94bb6885b686ac7cd8fa69042e2b83db65a3403d"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_review_load_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/paper_review_load_summary.csv",
+      "size_bytes": 1562,
+      "sha256": "533795a6fdb5e4b23c539e96240ab9d639f99bb1d1f46ef9258844e307061f21"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_deployment_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/paper_deployment_summary.csv",
+      "size_bytes": 2980,
+      "sha256": "2045bdb47248119e6a54d7b3a2178cbf52ca70c3a7f7bed4877e33ec32e40eb5"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_deployment_protocol_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/paper_deployment_protocol_summary.csv",
+      "size_bytes": 9309,
+      "sha256": "8e1555dc403e4933da54486546d4228ddab23fb8fcc77ea02553741c5c887101"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_runtime_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/paper_runtime_summary.csv",
+      "size_bytes": 1852,
+      "sha256": "65fbb1db8928f356761943b593724c2ee763ccbca94ad35dbfe0cd8a92cf5fef"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_operating_frontier.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/paper_operating_frontier.csv",
+      "size_bytes": 3002,
+      "sha256": "ee8a68b078da9a888991a454407b3773f6898d552ea61aa446711ad6a8ee7bca"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_operating_frontier.png",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/figures/paper_operating_frontier.png",
+      "size_bytes": 142480,
+      "sha256": "b0b015fcc78b05f5f49f36d6c937bb0ac7742bf2598f6fe9ef1a061b42b81da1"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/hardest_cpd_consensus_protocols.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/hardest_cpd_consensus_protocols.csv",
+      "size_bytes": 5065,
+      "sha256": "ae5abf8cdd9dd07516bba2c7a5ec37fd78d7cd7cbbd5465004e8984d5f5dc230"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/hardest_triage_consensus_ova_protocols.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/hardest_triage_consensus_ova_protocols.csv",
+      "size_bytes": 6070,
+      "sha256": "32693e680475ee02bc3b3050de6c0d7571535ed6de4673518243d4fb87488a65"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/hardest_protocol_method_comparison.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/hardest_protocol_method_comparison.csv",
+      "size_bytes": 20678,
+      "sha256": "afb1833f70ce34e7e2cb01b7df2cd23dfa8daa567b34b285601f82e50cf2e021"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/clean_large_method_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/clean_large_method_summary.csv",
+      "size_bytes": 54254,
+      "sha256": "9a3cc484aa09d01c84fdd939a0cebdb399ca47d7773a8d398204446f4214fa89"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/triage_review_load_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/triage_review_load_summary.csv",
+      "size_bytes": 36970,
+      "sha256": "0f5fb49553c5db8827b784b6f2f46ca239f4ed0d0a5400290e8e9a6bdb9d5842"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/selected_bank_assignments.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/selected_bank_assignments.csv",
+      "size_bytes": 14024,
+      "sha256": "647bf825f841c87d2beb391e52ee3e48cab0616195054ccf04fca3ad4c8801d1"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/triage_clean_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/triage_clean_summary.csv",
+      "size_bytes": 43326,
+      "sha256": "a2ea0220d759b0ccc168e128a89687357c5376f40ebef3cfd1518d888f543fb6"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_consensus_plus_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_consensus_plus_summary.csv",
+      "size_bytes": 1598,
+      "sha256": "bc34fffd8e8046348f535b0330fbfacfb40305946701d1678e94d21c7d3864d9"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_coverage_switch_plus_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_coverage_switch_plus_summary.csv",
+      "size_bytes": 1622,
+      "sha256": "9d97c2d074c724787baaafc019cdda8a9ef83f79794fd3e5b1b6eb9aaeb95920"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_consensus_gate_plus_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_consensus_gate_plus_summary.csv",
+      "size_bytes": 1662,
+      "sha256": "1906e178bcbf490e5f7ddd5b60f572369572fd803a877580b5a69dff7e42038c"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/adaptive_bank_method_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/adaptive_bank_method_summary.csv",
+      "size_bytes": 54855,
+      "sha256": "37a0996fbf217b6da104d0ece99077d78e119b86e76dda1ccc6389f4f1a1837f"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/adaptive_bank_triage_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/adaptive_bank_triage_summary.csv",
+      "size_bytes": 43331,
+      "sha256": "8416f69fd60269cd971bd30f7c4f69cb797bbbf93fd4783370faf77cafea81b9"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/adaptive_paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_consensus_plus_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/adaptive_paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_consensus_plus_summary.csv",
+      "size_bytes": 1590,
+      "sha256": "2b6af7e97fc654a0f7557b2678c73b26d2fcb67ee95850a460dcef740afd8223"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/adaptive_paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_coverage_switch_plus_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/adaptive_paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_coverage_switch_plus_summary.csv",
+      "size_bytes": 1622,
+      "sha256": "ef986363c0044680b7af3c4825c2bb4d73def1c77a6abd3e6c1bb818ec8e6864"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/adaptive_paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_consensus_gate_plus_summary.csv",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/tables/adaptive_paired_cpd_shift_multiproto_consensus_plus_vs_cpd_shift_multiproto_consensus_gate_plus_summary.csv",
+      "size_bytes": 1670,
+      "sha256": "f09ba5c7e589471e608745ead1e0590ad257a6d40529accc166cb78808e28b1f"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/paper_authoritative_manifest.json",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/manifests/paper_authoritative_manifest.json",
+      "size_bytes": 5063,
+      "sha256": "fe54b9a35a8d1b80646bfe9d1c79dd47b0ecdf1a0ae4ee6ddcf026874379f7ae"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/results/digest_cov12/reinforced_digest_20260408T040419Z/manifest.json",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/manifests/manifest.json",
+      "size_bytes": 822,
+      "sha256": "ed5aa60bc68ab9336bbc27b60efb869ce0119f0d2caa9a0add307ce037c9dac5"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/docs/wasa_paper_draft_20260409.md",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/docs/wasa_paper_draft_20260409.md",
+      "size_bytes": 18054,
+      "sha256": "0b756417412b3f380ca4264c517a297c0d060d856921c26007023894c644d7bf"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/docs/repro_submission_playbook_20260409.md",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/docs/repro_submission_playbook_20260409.md",
+      "size_bytes": 6553,
+      "sha256": "91e677ae68e6907a6f449a2e41426d552025b81a1c5252d562ea4be9c6b50726"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/docs/wasa_submission_packet_20260409.md",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/docs/wasa_submission_packet_20260409.md",
+      "size_bytes": 8531,
+      "sha256": "e5e9b92f0d3077f9eedd259ce346c67a03d4035e59b1ff8317c0489a8a14012c"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/docs/wasa_submission_convergence_20260408.md",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/docs/wasa_submission_convergence_20260408.md",
+      "size_bytes": 5504,
+      "sha256": "6a247c4ba6c9aaf94dfe7d0db378539afb0d60dd7532b2dc47e251141d84953c"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/README.md",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/docs/README.md",
+      "size_bytes": 7536,
+      "sha256": "7dd24ddfe4485275a72d4aec6e37fdaf3a5ddbb290f253464c409dbc8e0bbc79"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/docs/graph_schema_contract_v1.md",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/docs/graph_schema_contract_v1.md",
+      "size_bytes": 2684,
+      "sha256": "40c2e3d001ab91055e9fbee5f4b19e5022ab8f660780591361518f47203c3e3d"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/third_party/cabench_frozen/README.md",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/docs/cabench_frozen_README.md",
+      "size_bytes": 738,
+      "sha256": "c153c9aa9c7c4291cbe4f2491e94e1a09075b0e84d90fa68f30a853893f9f143"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/scripts/build_reinforced_digest.py",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/scripts/build_reinforced_digest.py",
+      "size_bytes": 43575,
+      "sha256": "02242a2b5c8dc3029f7a70e58b82b651eba4c3f902d6c78e9aed90b797a3f93c"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/scripts/build_submission_bundle.py",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/scripts/build_submission_bundle.py",
+      "size_bytes": 5740,
+      "sha256": "5f1c463c0c9f6143f595acf6e5a36d264bef2f2cd6b711ffb30e9039cb47a645"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/scripts/validate_graph_schema.py",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/scripts/validate_graph_schema.py",
+      "size_bytes": 3280,
+      "sha256": "cf6cb521619183eada0ef12b27d06bc3b6cd080a91625fa2ccefb0f272755960"
+    },
+    {
+      "source": "/home/user/workspace/OpenFedBot/configs/open_world_full_suite_multiproto_coverageswitch_clean_seed10.json",
+      "bundle_path": "/home/user/workspace/OpenFedBot/results/submission_bundle_20260409T012614Z/configs/open_world_full_suite_multiproto_coverageswitch_clean_seed10.json",
+      "size_bytes": 4314,
+      "sha256": "a24fc9f3b543e61271de9f7b4e474733f6bb3714744ec2de658410ae971655e4"
+    }
+  ]
+}
